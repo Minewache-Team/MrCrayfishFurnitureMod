@@ -33,7 +33,7 @@ public class FurnitureTileEntities
         GameRegistry.registerTileEntity(TileEntityCup.class, "cfmCup");
         GameRegistry.registerTileEntity(TileEntityCookieJar.class, "cfmCookieJar");
         GameRegistry.registerTileEntity(TileEntityTree.class, "cfmTree");
-        GameRegistry.registerTileEntity(TileEntityMirror.class, "cfmMirror");
+        //GameRegistry.registerTileEntity(TileEntityMirror.class, "cfmMirror");
         GameRegistry.registerTileEntity(TileEntityGrill.class, "cfmGrill");
         GameRegistry.registerTileEntity(TileEntityEsky.class, "cfmEski");
         GameRegistry.registerTileEntity(TileEntityDoorMat.class, "cfmDoorMat");

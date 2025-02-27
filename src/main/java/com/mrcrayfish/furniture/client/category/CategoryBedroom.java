@@ -35,7 +35,7 @@ public class CategoryBedroom extends AbstractCategory
         add(FurnitureBlocks.MODERN_LIGHT_OFF);
         add(FurnitureBlocks.CEILING_FAN);
         add(FurnitureBlocks.LIGHT_SWITCH_OFF);
-        add(FurnitureBlocks.MIRROR);
+        //add(FurnitureBlocks.MIRROR);
         add(FurnitureBlocks.CURTAINS);
         add(FurnitureBlocks.BLINDS_OAK);
         add(FurnitureBlocks.BLINDS_SPRUCE);

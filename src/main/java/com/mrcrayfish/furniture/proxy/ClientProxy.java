@@ -49,7 +49,7 @@ public class ClientProxy extends CommonProxy
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityWashingMachine.class, new WashingMachineRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCup.class, new CupRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTree.class, new TreeRenderer());
-        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityMirror.class, new MirrorRenderer());
+        //ClientRegistry.bindTileEntitySpecialRenderer(TileEntityMirror.class, new MirrorRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityOven.class, new OvenRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityGrill.class, new GrillRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEsky.class, new EskyRenderer());
@@ -62,7 +62,7 @@ public class ClientProxy extends CommonProxy
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityPhotoFrame.class, new PhotoFrameRenderer());
 
         MinecraftForge.EVENT_BUS.register(GifCache.INSTANCE);
-        MinecraftForge.EVENT_BUS.register(new MirrorRenderer());
+        //MinecraftForge.EVENT_BUS.register(new MirrorRenderer());
     }
 
     public void registerColorHandlers()
@@ -155,19 +155,19 @@ public class ClientProxy extends CommonProxy
     @SubscribeEvent
     public void onClientWorldLoad(WorldEvent.Load event)
     {
-        if(event.getWorld() instanceof WorldClient)
-        {
-            MirrorRenderer.mirrorGlobalRenderer.setWorldAndLoadRenderers((WorldClient) event.getWorld());
-        }
+        //if(event.getWorld() instanceof WorldClient)
+//        {
+//            MirrorRenderer.mirrorGlobalRenderer.setWorldAndLoadRenderers((WorldClient) event.getWorld());
+//        }
     }
 
     @SubscribeEvent
     public void onClientWorldUnload(WorldEvent.Unload event)
     {
-        if(event.getWorld() instanceof WorldClient)
-        {
-            MirrorRenderer.clearRegisteredMirrors();
-        }
+//        if(event.getWorld() instanceof WorldClient)
+//        {
+//            MirrorRenderer.clearRegisteredMirrors();
+//        }
     }
 
 

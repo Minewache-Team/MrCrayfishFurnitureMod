@@ -87,7 +87,7 @@ public class FurnitureBlocks
     public static final Block INFLATABLE_CASTLE, CASTLE_NETTING;
 
     /* Special */
-    public static final Block MIRROR;
+//    public static final Block MIRROR;
 
     static
     {
@@ -217,7 +217,7 @@ public class FurnitureBlocks
         KITCHEN_CABINET = new BlockCabinetKitchen(Material.WOOD).setUnlocalizedName("cabinet_kitchen").setRegistryName("cabinet_kitchen");
         CHOPPING_BOARD = new BlockChoppingBoard(Material.WOOD).setUnlocalizedName("chopping_board").setRegistryName("chopping_board");
         BAR_STOOL = new BlockBarStool(Material.WOOD).setUnlocalizedName("bar_stool").setRegistryName("bar_stool");
-        MIRROR = new BlockMirror(Material.GLASS).setUnlocalizedName("mirror").setRegistryName("mirror");
+        //MIRROR = new BlockMirror(Material.GLASS).setUnlocalizedName("mirror").setRegistryName("mirror");
         MANTEL_PIECE = new BlockMantelPiece(Material.ROCK).setUnlocalizedName("mantel_piece").setRegistryName("mantel_piece");
         GRAND_CHAIR_TOP = new BlockGrandChair(Material.WOOD, true).setUnlocalizedName("grand_chair_top").setRegistryName("grand_chair_top");
         GRAND_CHAIR_BOTTOM = new BlockGrandChair(Material.WOOD, false).setUnlocalizedName("grand_chair_bottom").setRegistryName("grand_chair_bottom");
@@ -455,7 +455,7 @@ public class FurnitureBlocks
         registerBlock(KITCHEN_CABINET, new ItemBlockColored(KITCHEN_CABINET));
         registerBlock(CHOPPING_BOARD);
         registerBlock(BAR_STOOL, new ItemBlockColored(BAR_STOOL));
-        registerBlock(MIRROR);
+        //registerBlock(MIRROR);
         registerBlock(MANTEL_PIECE);
         registerBlock(GRAND_CHAIR_TOP, null);
         registerBlock(GRAND_CHAIR_BOTTOM);
