@@ -41,7 +41,7 @@ public class DigitalClockRenderer extends TileEntitySpecialRenderer<TileEntityDi
             GlStateManager.scale(1.5, 1.5, 1.5);
             GlStateManager.enableRescaleNormal();
             GlStateManager.glNormal3f(0F, 1.0F, 0F);
-            Minecraft.getMinecraft().fontRenderer.drawString(ItemColored.getFromColor(te.getTextColor()) + TimeUtil.getFormattedTime(Minecraft.getMinecraft().world.getWorldTime()), 0, 0, Color.WHITE.getRGB());
+            Minecraft.getMinecraft().fontRenderer.drawString(ItemColored.getFromColor(te.getTextColor()) + TimeUtil.getFormattedTime((Minecraft.getMinecraft().world.getWorldTime() + 1000) % 24000), 0, 0, Color.WHITE.getRGB());
             GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
             GlStateManager.depthMask(true);
             RenderHelper.enableStandardItemLighting();
