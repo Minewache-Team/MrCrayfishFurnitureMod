@@ -13,9 +13,16 @@ import net.minecraft.item.ItemStack;
  */
 public class CeilingFanRenderer extends TileEntitySpecialRenderer<TileEntityCeilingFan>
 {
+    // saros: Stack ist konstant — vorher eine ItemStack-Allokation pro Ventilator pro Frame
+    private ItemStack fanStack = null;
+
     @Override
     public void render(TileEntityCeilingFan te, double x, double y, double z, float partialTicks, int destroyStage, float alpha)
     {
+        if(fanStack == null)
+        {
+            fanStack = new ItemStack(FurnitureItems.CEILING_FAN_FANS);
+        }
         GlStateManager.pushMatrix();
         {
             GlStateManager.translate(x, y, z);
@@ -25,7 +32,7 @@ public class CeilingFanRenderer extends TileEntitySpecialRenderer<TileEntityCeil
             float rotation = te.prevFanRotation + (te.fanRotation - te.prevFanRotation) * partialTicks;
             GlStateManager.rotate(-rotation, 0, 1, 0);
 
-            Minecraft.getMinecraft().getRenderItem().renderItem(new ItemStack(FurnitureItems.CEILING_FAN_FANS), ItemCameraTransforms.TransformType.NONE);
+            Minecraft.getMinecraft().getRenderItem().renderItem(fanStack, ItemCameraTransforms.TransformType.NONE);
         }
         GlStateManager.popMatrix();
     }
